@@ -1,0 +1,76 @@
+﻿
+@model Employees       
+@*  burası Product yapmıştık sonra  dto ekleyince değiştirdim  *@
+
+
+<div class="text-center">
+
+    <div class="diaplay display-6"> PROJE OLUŞTUR  </div>
+</div>
+
+
+<form method="post" asp-action="CreateEmployee" enctype="multipart/form-data">       
+
+    
+
+
+     <diV class="form-group">
+         <label asp-for="ProjectId"> ÇALIŞANIN EKLENİCEĞİ PROJE   </label>
+         <br />
+
+
+        <select class="form-control"  asp-items="@ViewBag.categores" asp-for="ProjectId" >        </select>    
+
+       @*  burası ömeli  burada  categoryid  ile bağlantı yapıp bu sayfasda eklettik
+
+        ve  öne öenlisi asf for ile de  categoryId yi  ilişkilendirdik  burası controllerda        *@
+
+     </diV>
+      <br />
+    <diV class="form-group">
+       <label asp-for="Ad">    </label>
+
+      <input asp-for="Ad" class="form-control" />
+      </diV>
+
+         <diV class="form-group">
+       <label asp-for="Soyad">    </label>
+      <input asp-for="Soyad" class="form-control" />
+      </diV>
+
+      <diV class="form-group my-3">
+        <label asp-for="Duty">    </label>
+
+        <input asp-for="Duty" class="form-control" />
+    </diV>
+
+
+    <diV class="form-group my-3">
+        <label asp-for="TCKimlikNo">    </label>
+
+        <input asp-for="TCKimlikNo" class="form-control" />
+    </diV>
+
+     <diV class="form-group my-3">
+        <label asp-for="DogumYili">    </label>
+
+        <input asp-for="DogumYili" class="form-control" />
+    </diV>
+
+      
+    </diV>
+
+    <diV class="form-group my-3">
+        
+        <div btn-group>
+       <button class="btn btn-primary" type="submit"> 
+           <i class="fa fa-save"></i>  
+           kaydet
+          </button>
+          <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">
+              <i class="fa fa-list"></i>
+              ürün listesi  </a>
+    </diV>
+    
+    </diV>
+</form>

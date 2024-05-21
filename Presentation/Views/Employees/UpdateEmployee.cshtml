@@ -1,0 +1,75 @@
+﻿@model Employees  
+
+
+
+<div class="text-center">
+
+    <div class="diaplay display-6">  Çalışan güncelleme  </div>
+</div>
+
+
+<form method="post" asp-action="UpdateEmployee" enctype="multipart/form-data" >       
+
+ 
+
+
+
+      <diV class="form-group">
+      
+      <input type="hidden" asp-for="EmployeeId" />
+      </diV>
+
+
+    <diV class="form-group">
+       <label asp-for="Ad">    </label>
+
+      <input asp-for="Ad" class="form-control" />
+      </diV>
+
+
+        <diV class="form-group">
+       <label asp-for="Soyad">    </label>
+
+      <input asp-for="Soyad" class="form-control" />
+      </diV>
+
+         <diV class="form-group">
+       <label asp-for="Duty">    </label>
+
+      <input asp-for="Duty" class="form-control" />
+      </diV>
+
+
+        <diV class="form-group">
+       <label asp-for="TCKimlikNo">    </label>
+
+      <input asp-for="TCKimlikNo" class="form-control" />
+      </diV>
+
+      <diV class="form-group">
+       <label asp-for="DogumYili">    </label>
+
+      <input asp-for="DogumYili" class="form-control" />
+      </diV>
+
+      
+        <diV class="form-group">
+       <label asp-for="ProjectId">    </label>
+
+      <input asp-for="ProjectId" class="form-control" />
+      </diV>
+      
+    <diV class="form-group my-3">
+        
+        <div btn-group>
+       <button class="btn btn-primary" type="submit"> 
+           <i class="fa fa-save"></i>  
+           Güncelle
+          </button>
+          <a asp-action="Index" class="btn btn-outline-primary">
+              <i class="fa fa-list"></i>
+              ürün listesi  </a>
+    </diV>
+    
+    </diV>
+</form>

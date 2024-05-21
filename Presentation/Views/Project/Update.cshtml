@@ -1,0 +1,63 @@
+﻿@model ProjectsDtosForUpdate  
+
+
+
+<div class="text-center">
+
+    <div class="diaplay display-6">  Şirket ismini güncelle  </div>
+</div>
+
+
+<form method="post" asp-action="Update" enctype="multipart/form-data" >       
+
+ 
+
+
+
+      <diV class="form-group">
+      
+      <input type="hidden" asp-for="ProjectId" />
+      </diV>
+
+
+    <diV class="form-group">
+       <label asp-for="ProjectName">    </label>
+
+      <input asp-for="ProjectName" class="form-control" />
+      </diV>
+
+
+        <diV class="form-group">
+       <label asp-for="ProjectContent">    </label>
+
+      <input asp-for="ProjectContent" class="form-control" />
+      </diV>
+
+         <diV class="form-group">
+       <label asp-for="City">    </label>
+
+      <input asp-for="City" class="form-control" />
+      </diV>
+
+
+        <diV class="form-group">
+       <label asp-for="CompanysId">    </label>
+
+      <input asp-for="CompanysId" class="form-control" />
+      </diV>
+
+      
+    <diV class="form-group my-3">
+        
+        <div btn-group>
+       <button class="btn btn-primary" type="submit"> 
+           <i class="fa fa-save"></i>  
+           Güncelle
+          </button>
+          <a asp-action="Index" class="btn btn-outline-primary">
+              <i class="fa fa-list"></i>
+              ürün listesi  </a>
+    </diV>
+    
+    </diV>
+</form>

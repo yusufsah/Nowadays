@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Projects>
+
+<div class="container">
+    <div class="text-center">
+        <h1 class="display-4">PROJELER</h1>
+        <div class="my-3">
+         
+        </div>
+    </div>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">@item.ProjectName</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Konu: @item.ProjectContent</p>
+                        <p class="card-text">Şehir: @item.City</p>
+                        <p class="card-text">ıd: @item.ProjectId</p>
+                        <div class="btn-group">
+                            <a class="btn btn-sm btn-outline-info" asp-controller="Employees" asp-action="Index" asp-route-id="@item.ProjectId" asp-route-ProjectId="@item.ProjectId"> Çalışan Listesi </a>
+                            <a class="btn btn-sm btn-outline-warning" asp-action="Update" asp-route-id="@item.ProjectId">Güncelle</a>
+                            <a class="btn btn-sm btn-outline-info" target="_blank" asp-action="get" asp-route-id="@item.ProjectId">Görüntüle</a>
+                            <a class="btn btn-sm btn-outline-danger" asp-action="Delete" asp-route-id="@item.ProjectId">Ürünü Sil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

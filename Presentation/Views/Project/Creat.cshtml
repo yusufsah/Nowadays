@@ -1,0 +1,64 @@
+﻿@model ProjectsDtosForinsertion       
+@*  burası Product yapmıştık sonra  dto ekleyince değiştirdim  *@
+
+
+<div class="text-center">
+
+    <div class="diaplay display-6"> PROJE OLUŞTUR  </div>
+</div>
+
+
+<form method="post" asp-action="Creat" enctype="multipart/form-data">       
+
+    
+
+
+     <diV class="form-group">
+         <label asp-for="CompanysId"> ŞİRKET İSMİ SEÇİN   </label>
+         <br />
+
+
+        <select class="form-control"  asp-items="@ViewBag.categores" asp-for="CompanysId" >        </select>    
+
+       @*  burası ömeli  burada  categoryid  ile bağlantı yapıp bu sayfasda eklettik
+
+        ve  öne öenlisi asf for ile de  categoryId yi  ilişkilendirdik  burası controllerda        *@
+
+     </diV>
+      <br />
+    <diV class="form-group">
+       <label asp-for="ProjectName">    </label>
+
+      <input asp-for="ProjectName" class="form-control" />
+      </diV>
+
+         <diV class="form-group">
+       <label asp-for="ProjectContent">    </label>
+      <input asp-for="ProjectContent" class="form-control" />
+      </diV>
+
+    <diV class="form-group my-3">
+        <label asp-for="City">    </label>
+
+        <input asp-for="City" class="form-control" />
+    </diV>
+
+   
+
+      
+    </diV>
+
+    <diV class="form-group my-3">
+        
+        <div btn-group>
+       <button class="btn btn-primary" type="submit"> 
+           <i class="fa fa-save"></i>  
+           kaydet
+          </button>
+          <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">
+              <i class="fa fa-list"></i>
+              ürün listesi  </a>
+    </diV>
+    
+    </diV>
+</form>
